@@ -26,9 +26,9 @@ url: https://afsheenRajendran.github.io # the base hostname & protocol for your 
 github_username:  afsheenRajendran
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+#theme: minima
+#plugins:
+# - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
