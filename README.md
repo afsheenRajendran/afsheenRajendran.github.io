@@ -1,15 +1,5 @@
 
 
-----------------------------
-2024.08.20
-----------------------------
-
-jekyll site doesn't look good
-
-- github was not allowing even PRs on `main`, 
-so removed the ruleset and all protections
-
-
 
 
 ----------------------------
