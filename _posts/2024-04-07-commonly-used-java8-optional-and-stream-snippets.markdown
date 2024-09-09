@@ -12,6 +12,16 @@ Optional<Other> result = things.stream()
         .map(this::resolve)          // maps thing to Optional<OtherThing>
         .flatMap(Optional::stream)   // equivalent to get if value is present
         .findFirst();
+```
+
+In earlier java versions that didn't have `Optional::stream`,
+the above snippet might have looked like
+```java
+Optional<Other> result = things.stream()
+        .map(this::resolve)          // maps thing to Optional<OtherThing>
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
 
 ```
 
@@ -19,8 +29,8 @@ Optional<Other> result = things.stream()
 
 ```java
 String itemTile = Optional.ofNullable(catalog.getItems())
-        .stream()
-        .flatMap(Collection::stream)
+        .stream()  // maps to stream of one object if optional exists, stream.empty otherwise
+        .flatMap(Collection::stream) // converts stream of itemList to stream of individual items
         .findFirst()
         .map(Item::getTitle)
         .orElse(null);
