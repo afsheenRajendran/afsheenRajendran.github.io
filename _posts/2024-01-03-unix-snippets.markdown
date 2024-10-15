@@ -17,3 +17,6 @@ date:   2024-01-03 22:02:01 -0500
 - One method of combining multiple commands is to use a -e before each command:
   `sed -e 's/a/A/' -e 's/b/B/' <old >new`
 
+- jq (for json wrangling)
+  sorts json blocks based on `key` variable
+  `jq '.values|=sort_by(.key)' local.postman_environment.json > local_updated`
