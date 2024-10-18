@@ -30,3 +30,32 @@ date:   2024-01-03 22:02:01 -0500
 ```
   jq '.values|=sort_by(.key)' local.postman_environment.json > local_updated
 ```
+
+
+
+## Useful GIT Commands
+
+- to restore file to version in master
+```
+alias gitrstx="git restore --source origin/master DigitalCouponService.java"
+```
+
+- to copy single file from some other branch to current working directory
+```
+git restore --source some-other-branch service-client/src/test/java/com/centralmarket/some.java
+```
+
+- to revert last un-pushed commit
+```
+git reset --soft HEAD~1
+```
+
+- to revert last pushed commit
+```
+git reset --hard HEAD~1
+```
+
+- to compare file across two commits
+```
+git diff f04082f6..2b5282cc HPGServiceIntegration.java
+```
