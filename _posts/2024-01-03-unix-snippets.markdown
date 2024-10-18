@@ -37,12 +37,12 @@ date:   2024-01-03 22:02:01 -0500
 
 - to restore file to version in master
 ```
-alias gitrstx="git restore --source origin/master DigitalCouponService.java"
+git restore --source origin/master OnlyCashService.java
 ```
 
 - to copy single file from some other branch to current working directory
 ```
-git restore --source some-other-branch service-client/src/test/java/com/centralmarket/some.java
+git restore --source some-other-branch service-client/src/test/java/com/afsheen/some.java
 ```
 
 - to revert last un-pushed commit
@@ -57,5 +57,5 @@ git reset --hard HEAD~1
 
 - to compare file across two commits
 ```
-git diff f04082f6..2b5282cc HPGServiceIntegration.java
+git diff f04082f6..2b5282cc ExternalServiceIntegration.java
 ```
